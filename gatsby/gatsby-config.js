@@ -11,14 +11,14 @@ export default {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-source-sanity',
-      options: {
-        projectId: 'jepvh1pd',
-        dataset: 'production',
-        watchMode: true,
-        token: process.env.SANITY_TOKEN,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-sanity',
+    //   options: {
+    //     projectId: '',
+    //     dataset: 'production',
+    //     watchMode: true,
+    //     token: process.env.SANITY_TOKEN,
+    //   },
+    // },
   ],
 };
