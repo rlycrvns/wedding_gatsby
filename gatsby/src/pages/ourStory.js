@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function HomePage() {
+export default function OurStory() {
   return (
     <div>
-      <h1>Home!</h1>
+
     </div>
   )
 }
