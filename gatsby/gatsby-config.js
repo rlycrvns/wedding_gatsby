@@ -6,7 +6,8 @@ export default {
   siteMetadata: {
     title: `Baron Cravens Wedding`,
     siteUrl: 'https://rileyandjessica.com',
-    description: 'Jessica Baron and Riley Cravens are to be wed on September 5, 2021 at Scholl\'s Valley Lodge in Portland, OR'
+    description:
+      "Jessica Baron and Riley Cravens are to be wed on September 5, 2021 at Scholl's Valley Lodge in Portland, OR",
   },
   plugins: [
     'gatsby-plugin-react-helmet',
