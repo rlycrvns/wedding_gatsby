@@ -1,8 +1,17 @@
 {
   "name": "wedding-gatsby-front-end",
+  "private": true,
   "version": "1.0.0",
   "description": "a wedding website",
-  "main": "gatsby-config.js",
+  "scripts": {
+    "build": "NODE_OPTIONS=\"-r esm\" gatsby build",
+    "develop": "NODE_OPTIONS=\"-r esm\" gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "netlify": "netlify dev",
+    "prebuild": "netlify-lambda install"
+  },
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
     "dotenv": "^8.2.0",
@@ -35,15 +44,6 @@
     "eslint-plugin-react-hooks": "^4.1.2",
     "esm": "^3.2.25",
     "prettier": "^2.1.1"
-  },
-  "scripts": {
-    "build": "cross-env NODE_OPTIONS=\"-r esm\" gatsby build",
-    "develop": "cross-env NODE_OPTIONS=\"-r esm\" gatsby develop",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "netlify": "netlify dev",
-    "prebuild": "netlify-lambda install"
   },
   "eslintConfig": {
     "extends": [
