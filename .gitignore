@@ -60,6 +60,7 @@ public
 
 # sanity files
 dist
+config
 
 # Mac files
 .DS_Store
