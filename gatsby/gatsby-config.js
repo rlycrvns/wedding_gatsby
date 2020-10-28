@@ -4,7 +4,7 @@ dotenv.config({ path: '.env' });
 
 export default {
   siteMetadata: {
-    title: `Baron Cravens Wedding`,
+    title: `Jessica and Riley 9/5/2021`,
     siteUrl: 'https://rileyandjessica.com',
     description:
       "Jessica Baron and Riley Cravens are to be wed on September 5, 2021 at Scholl's Valley Lodge in Portland, OR",
@@ -12,14 +12,14 @@ export default {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
-    // {
-    //   resolve: 'gatsby-source-sanity',
-    //   options: {
-    //     projectId: '',
-    //     dataset: 'production',
-    //     watchMode: true,
-    //     token: process.env.SANITY_TOKEN,
-    //   },
-    // },
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'uuf1jx5a',
+        dataset: 'production',
+        watchMode: true,
+        token: process.env.SANITY_TOKEN,
+      },
+    },
   ],
 };
