@@ -6,7 +6,7 @@ const LogoStyles = styled.div`
   font-size: clamp(7px, 0.65vw, 9px);
   width: 20em;
   height: 20em;
-  background: radial-gradient(closest-side, var(--pink), var(--bg));
+  background: linear-gradient(-135deg, var(--bg) 15%, var(--pink) 50%, var(--bg) 85%);
   border: 1rem solid var(--green);
   border-image: url(${bgBrush}) 5 20 15 18;
   border-image-width: 2rem;

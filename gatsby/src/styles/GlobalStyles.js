@@ -13,7 +13,7 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     background: var(--bg);
-    background: linear-gradient(90deg, var(--bg) 50%, var(--white) 100%);
+    background: linear-gradient(135deg, var(--bg) 50%, var(--white) 100%);
     font-size: 10px;
   }
 
