@@ -2,8 +2,10 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import bgBrush from '../assets/images/lite-green-stroke.svg';
+import Logo from './Logo';
 
 const NavStyles = styled.nav`
+  margin: 0 1.5rem;
   ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -11,32 +13,49 @@ const NavStyles = styled.nav`
   }
   li {
     text-align: center;
-  }
-  a {
-    display: block;
-    font-family: HeadingReg;
-    color: var(--rust);
-    z-index: 2;
     background: url(${bgBrush});
     background-repeat: no-repeat;
     background-size: 22rem;
-    background-position: center;
+    background-position: top;
+  }
+  .logoLink {
+    transition: all 0.25s ease-in-out;
+    &:hover,
+    &:active,
+    &:focus {
+      transform: translateY(-1rem);
+    }
+  }
+  .navlink {
+    display: block;
+    font-family: HeadingReg;
+    color: var(--rust);
+    font-size: 2rem;
+    z-index: 2;
+    transition: all 0.25s ease-in-out;
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--black);
+      transform: translateY(-0.5rem);
+    }
+    @media (max-width: 1199px) {
+      background-size: 18rem;
+    }
   }
 `;
 
 function NavLink({ data }) {
   return (
     <li>
-      <Link to={data.url}>{data.name}</Link>
+      <Link className="navlink" to={data.url}>
+        {data.name}{' '}
+      </Link>
     </li>
   );
 }
 
 export default function Nav() {
-  const home = {
-    url: '/',
-    name: 'Home',
-  };
   const details = {
     url: '/details',
     name: 'Details',
@@ -56,9 +75,11 @@ export default function Nav() {
   return (
     <NavStyles>
       <ul>
-        <NavLink data={home} />
         <NavLink data={details} />
         <NavLink data={ourStory} />
+        <Link className="logoLink" to="/">
+          <Logo />
+        </Link>
         <NavLink data={playlist} />
         <NavLink data={rsvp} />
       </ul>
