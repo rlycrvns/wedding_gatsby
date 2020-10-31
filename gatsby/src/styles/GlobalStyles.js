@@ -75,6 +75,11 @@ const GlobalStyles = createGlobalStyle`
   img {
     max-width: 100%;
   }
+
+  .nav-open.nav-open {
+    transform: translateY(0);
+    padding-top: 2rem;
+  }
 `;
 
 export default GlobalStyles;
