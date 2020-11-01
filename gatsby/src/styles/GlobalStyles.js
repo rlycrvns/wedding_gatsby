@@ -28,18 +28,13 @@ const GlobalStyles = createGlobalStyle`
 
   button {
     background: var(--pink);
-    color: white;
-    border: 0;
+    color: black;
+    border: 2px solid var(--green);
     padding: 0.6rem 1rem;
-    border-radius: 2px;
+    border-radius: 2.5rem;
+    box-shadow: 0px 0px 8px 1px var(--black);
     cursor: pointer;
-    --cast: 2px;
-    box-shadow: var(--cast) var(--cast) 0 var(--grey);
-    text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.2);
     transition: all 0.2s;
-    &:hover {
-      --cast: 4px;
-    }
   }
 
   .gatsby-image-wrapper img[src*=base64\\,] {
@@ -78,7 +73,6 @@ const GlobalStyles = createGlobalStyle`
 
   .nav-open.nav-open {
     transform: translateY(0);
-    padding-top: 2rem;
   }
 `;
 
