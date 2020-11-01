@@ -7,6 +7,12 @@ export default {
   icon,
   fields: [
     {
+      name: 'name',
+      title: 'Name',
+      type: 'string',
+      description: 'Name of the photo',
+    },
+    {
       name: 'image',
       title: 'Image',
       type: 'image',
@@ -17,9 +23,11 @@ export default {
   ],
   preview: {
     select: {
+      title: 'name',
       media: 'image',
     },
-    prepare: ({ media }) => ({
+    prepare: ({ title, media }) => ({
+      title,
       media,
     }),
   },
