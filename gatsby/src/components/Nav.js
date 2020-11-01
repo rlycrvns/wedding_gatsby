@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import { MdClose, MdMenu } from 'react-icons/md';
 import bgBrush from '../assets/images/lite-green-stroke.svg';
 import Logo from './Logo';
 
@@ -10,10 +11,15 @@ const NavButtonStyles = styled.div`
   bottom: 0;
   text-align: center;
   z-index: 100;
+  display: flex;
+  justify-content: center;
   button {
     margin: 2rem;
     bottom: 2rem;
-    color: var(--black);
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -84,20 +90,15 @@ const NavStyles = styled.nav`
   }
 `;
 
-function NavLink({ data }) {
+function NavLink({ data, setNavOpen }) {
   return (
     <li className="nav-link">
-      <Link to={data.url}>{data.name} </Link>
+      <Link onClick={() => setNavOpen(false)} to={data.url}>
+        {data.name}{' '}
+      </Link>
     </li>
   );
 }
-
-// const useToggleNav = (initialState) => {
-//   const [isNavToggled, setIsNavToggled] = useState(initialState);
-//   const toggleNav = useCallback(() => setIsNavToggled((state) => !state), [setIsNavToggled]);
-
-//   return [isNavToggled, toggleNav];
-// };
 
 export default function Nav() {
   const [navOpen, setNavOpen] = useState(false);
@@ -126,20 +127,20 @@ export default function Nav() {
           aria-expanded={navOpen === true ? 'true' : 'false'}
           type="button"
         >
-          Menu
+          {navOpen ? <MdClose /> : <MdMenu />}
         </button>
       </NavButtonStyles>
       <NavStyles className={navOpen ? 'nav-open' : ''}>
         <ul>
-          <NavLink data={details} />
-          <NavLink data={ourStory} />
+          <NavLink navOpen={navOpen} setNavOpen={setNavOpen} data={details} />
+          <NavLink navOpen={navOpen} setNavOpen={setNavOpen} data={ourStory} />
           <li className="logoLink">
-            <Link to="/">
+            <Link onClick={() => setNavOpen(false)} to="/">
               <Logo />
             </Link>
           </li>
-          <NavLink data={playlist} />
-          <NavLink data={rsvp} />
+          <NavLink navOpen={navOpen} setNavOpen={setNavOpen} data={playlist} />
+          <NavLink navOpen={navOpen} setNavOpen={setNavOpen} data={rsvp} />
         </ul>
       </NavStyles>
     </>
