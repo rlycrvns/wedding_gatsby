@@ -8,10 +8,10 @@ export default function HomePage({ data }) {
   return (
     <>
       <SEO />
-      <div>
+      <main>
         <Collage photos={photos} />
         <h1>Home!</h1>
-      </div>
+      </main>
     </>
   );
 }
@@ -20,9 +20,10 @@ export const query = graphql`
   query PhotoQuery {
     photos: allSanityPhotos {
       nodes {
+        name
         image {
           asset {
-            fluid(maxWidth: 800) {
+            fluid {
               ...GatsbySanityImageFluid
             }
           }
