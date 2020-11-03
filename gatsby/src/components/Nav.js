@@ -71,10 +71,11 @@ const NavStyles = styled.nav`
     margin: 0;
     background: linear-gradient(-45deg, var(--bg) 50%, var(--white) 100%);
     position: fixed;
+    z-index: 5;
     width: 100vw;
     height: 100vh;
     transform: translateY(-100vh);
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.5s ease-in-out;
     ul {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 6rem 6rem 6rem 6rem;
@@ -92,6 +93,20 @@ const NavStyles = styled.nav`
     }
   }
 `;
+
+function NavButton({ navOpen, setNavOpen }) {
+  return (
+    <NavButtonStyles>
+      <button
+        onClick={() => setNavOpen((prevnavOpen) => !prevnavOpen)}
+        aria-expanded={navOpen === true ? 'true' : 'false'}
+        type="button"
+      >
+        {navOpen ? <MdClose /> : <MdMenu />}
+      </button>
+    </NavButtonStyles>
+  );
+}
 
 function NavLink({ data, setNavOpen }) {
   return (
@@ -124,15 +139,6 @@ export default function Nav() {
   };
   return (
     <>
-      <NavButtonStyles>
-        <button
-          onClick={() => setNavOpen((prevnavOpen) => !prevnavOpen)}
-          aria-expanded={navOpen === true ? 'true' : 'false'}
-          type="button"
-        >
-          {navOpen ? <MdClose /> : <MdMenu />}
-        </button>
-      </NavButtonStyles>
       <NavStyles className={navOpen ? 'nav-open' : ''}>
         <ul>
           <NavLink navOpen={navOpen} setNavOpen={setNavOpen} data={details} />
@@ -146,6 +152,7 @@ export default function Nav() {
           <NavLink navOpen={navOpen} setNavOpen={setNavOpen} data={rsvp} />
         </ul>
       </NavStyles>
+      <NavButton navOpen={navOpen} setNavOpen={setNavOpen} />
     </>
   );
 }
