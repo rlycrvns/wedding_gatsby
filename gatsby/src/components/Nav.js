@@ -67,6 +67,11 @@ const NavStyles = styled.nav`
       }
     }
   }
+  @media (min-width: 1000px) {
+    .home {
+      display: none;
+    }
+  }
   @media (max-width: 999px) {
     margin: 0;
     background: linear-gradient(-45deg, var(--bg) 50%, var(--white) 100%);
@@ -74,7 +79,7 @@ const NavStyles = styled.nav`
     z-index: 5;
     width: 100vw;
     height: 100vh;
-    transform: translateY(-100vh);
+    transform: translateY(100vh);
     transition: transform 0.5s ease-in-out;
     ul {
       grid-template-columns: 1fr;
@@ -82,7 +87,7 @@ const NavStyles = styled.nav`
       align-items: center;
     }
     .logoLink {
-      grid-row: 1;
+      display: none;
     }
     .nav-link {
       background-position: center;
@@ -108,9 +113,9 @@ function NavButton({ navOpen, setNavOpen }) {
   );
 }
 
-function NavLink({ data, setNavOpen }) {
+function NavLink({ data, setNavOpen, className }) {
   return (
-    <li className="nav-link">
+    <li className={className}>
       <Link onClick={() => setNavOpen(false)} to={data.url}>
         {data.name}{' '}
       </Link>
@@ -121,6 +126,10 @@ function NavLink({ data, setNavOpen }) {
 export default function Nav() {
   const [navOpen, setNavOpen] = useState(false);
 
+  const home = {
+    url: '/',
+    name: 'Home',
+  };
   const details = {
     url: '/details',
     name: 'Details',
@@ -141,15 +150,16 @@ export default function Nav() {
     <>
       <NavStyles className={navOpen ? 'nav-open' : ''}>
         <ul>
-          <NavLink navOpen={navOpen} setNavOpen={setNavOpen} data={details} />
-          <NavLink navOpen={navOpen} setNavOpen={setNavOpen} data={ourStory} />
+          <NavLink className="home nav-link" navOpen={navOpen} setNavOpen={setNavOpen} data={home} />
+          <NavLink className="details nav-link" navOpen={navOpen} setNavOpen={setNavOpen} data={details} />
+          <NavLink className="story nav-link" navOpen={navOpen} setNavOpen={setNavOpen} data={ourStory} />
           <li className="logoLink">
             <Link onClick={() => setNavOpen(false)} to="/">
               <Logo />
             </Link>
           </li>
-          <NavLink navOpen={navOpen} setNavOpen={setNavOpen} data={playlist} />
-          <NavLink navOpen={navOpen} setNavOpen={setNavOpen} data={rsvp} />
+          <NavLink className="playlist nav-link" navOpen={navOpen} setNavOpen={setNavOpen} data={playlist} />
+          <NavLink className="rsvp nav-link" navOpen={navOpen} setNavOpen={setNavOpen} data={rsvp} />
         </ul>
       </NavStyles>
       <NavButton navOpen={navOpen} setNavOpen={setNavOpen} />
