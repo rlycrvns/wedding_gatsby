@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterStyles = styled.footer`
+  margin-top: 10rem;
+  margin-bottom: 2rem;
   p {
     font-size: 1.5rem;
     font-family: BodySemi;
@@ -14,6 +16,9 @@ const FooterStyles = styled.footer`
     &:focus {
       color: var(--rust);
     }
+  }
+  @media (max-width: 999px) {
+    margin-bottom: 8rem;
   }
 `;
 
