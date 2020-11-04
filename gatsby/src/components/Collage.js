@@ -3,6 +3,8 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 const CollageStyles = styled.div`
+  background-color: var(--rust);
+  margin-top: 5rem;
   position: relative;
   z-index: 1;
   display: grid;
@@ -51,6 +53,38 @@ const CollageStyles = styled.div`
   }
   .photo12 {
     grid-column: span 6;
+  }
+  @media (max-width: 999px) {
+    margin: 0;
+  }
+  @media (max-width: 699px) {
+    grid-template-columns: repeat(11, 1fr);
+    .photo2 {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
+    .photo6 {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
+    .photo7 {
+      grid-column: span 3;
+    }
+    .photo8 {
+      grid-row: span 3;
+    }
+    .photo9 {
+      grid-column: span 4;
+    }
+    .photo10 {
+      grid-column: span 3;
+    }
+    .photo11 {
+      grid-column: span 11;
+    }
+    .photo12 {
+      grid-column: span 11;
+    }
   }
 `;
 
