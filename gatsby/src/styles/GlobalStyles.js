@@ -13,12 +13,13 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     background: var(--bg);
-    background: linear-gradient(135deg, var(--bg) 50%, var(--white) 100%);
+    /* background: linear-gradient(135deg, var(--bg) 0%, var(--white) 50%, var(--bg) 100%); */
     font-size: 10px;
   }
 
   body {
     font-size: 2rem;
+    overflow-x: hidden;
   }
 
   fieldset {
