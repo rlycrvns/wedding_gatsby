@@ -75,6 +75,9 @@ const GlobalStyles = createGlobalStyle`
   .nav-open.nav-open {
     transform: translateY(0);
   }
+  #hide {
+    display: none;
+  }
 `;
 
 export default GlobalStyles;
