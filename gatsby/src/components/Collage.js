@@ -8,7 +8,7 @@ const CollageStyles = styled.div`
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(13, 1fr);
   gap: 0.5rem;
   .Hero {
     grid-column: span 3;
@@ -31,16 +31,11 @@ const CollageStyles = styled.div`
     grid-row: span 2;
   }
   .photo7 {
-    grid-column: span 2;
+    grid-column: span 3;
   }
   .photo8 {
-    grid-column: span 2;
+    grid-column: span 3;
     grid-row: span 2;
-    picture {
-      img {
-        object-position: 25% center !important;
-      }
-    }
   }
   .photo9 {
     grid-column: span 3;
@@ -59,8 +54,12 @@ const CollageStyles = styled.div`
   }
   @media (max-width: 699px) {
     grid-template-columns: repeat(11, 1fr);
+    .photo1 {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
     .photo2 {
-      grid-column: span 4;
+      grid-column: span 3;
       grid-row: span 2;
     }
     .photo6 {
@@ -69,9 +68,11 @@ const CollageStyles = styled.div`
     }
     .photo7 {
       grid-column: span 3;
+      grid-row: span 2;
     }
     .photo8 {
-      grid-row: span 3;
+      grid-column: span 4;
+      grid-row: span 4;
     }
     .photo9 {
       grid-column: span 4;

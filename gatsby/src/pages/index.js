@@ -112,7 +112,7 @@ export default function HomePage({ data }) {
 
 export const query = graphql`
   query PhotoQuery {
-    photos: allSanityPhotos {
+    photos: allSanityPhotos(sort: { fields: _createdAt }) {
       nodes {
         name
         image {
