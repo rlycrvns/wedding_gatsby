@@ -1,9 +1,11 @@
 import React from 'react';
+import H1 from '../components/H1';
 
 export default function FourOhFourPage() {
   return (
     <div>
-      <h1>This page does not exist</h1>
+      <H1 title="404" />
+      <p>This page does not exist</p>
     </div>
   );
 }

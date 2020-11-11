@@ -1,9 +1,10 @@
 import React from 'react';
+import H1 from '../components/H1';
 
 export default function OurStory() {
   return (
     <div>
-      <h1>Our Story!</h1>
+      <H1 title="Our Story" />
     </div>
   );
 }
