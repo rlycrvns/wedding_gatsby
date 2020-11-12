@@ -3,11 +3,16 @@ import styled from 'styled-components';
 import H1 from '../components/H1';
 import SpotifyPlayer from '../components/SpotifyPlayer';
 
-const PlaylistStyles = styled.div``;
+const PlaylistStyles = styled.div`
+  p {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+`;
 
 export default function PlaylistPage() {
   return (
-    <div>
+    <PlaylistStyles>
       <H1 title="Playlist" />
       <p>Help us build the perfect playlist!</p>
       <p>
@@ -21,6 +26,6 @@ export default function PlaylistPage() {
         </a>
       </p>
       <SpotifyPlayer />
-    </div>
+    </PlaylistStyles>
   );
 }

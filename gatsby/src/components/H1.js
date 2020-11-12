@@ -10,7 +10,7 @@ export default function H1({ title }) {
     h1 {
       position: relative;
       text-align: center;
-      font-family: HeadingCursive;
+      font-family: 'HeadingCursive';
       font-size: 6rem;
       color: var(--rust);
       z-index: 3;

@@ -25,7 +25,7 @@ const LogoStyles = styled.div`
   .letter {
     font-size: 7em;
     color: var(--rust);
-    font-family: HeadingCursive;
+    font-family: 'HeadingCursive';
   }
   .riley {
     padding-right: 1rem;

@@ -54,7 +54,7 @@ const NavStyles = styled.nav`
   .nav-link {
     a {
       display: block;
-      font-family: HeadingReg;
+      font-family: 'HeadingReg';
       color: var(--rust);
       font-size: 2rem;
       z-index: 2;

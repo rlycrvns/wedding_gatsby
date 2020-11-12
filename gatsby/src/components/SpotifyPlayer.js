@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import Iframe from 'react-iframe';
+import React, { useState } from 'react';
 import Spinner from 'react-spinkit';
 import styled from 'styled-components';
 
@@ -26,26 +25,29 @@ const SpotifyStyles = styled.div`
 
 export default function SpotifyPlayer() {
   const [loaded, setLoaded] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoaded(true);
-    }, 3000);
-  }, []);
+
+  function iframeLoaded() {
+    if (!loaded) {
+      setTimeout(() => {
+        setLoaded(true);
+      }, 2000);
+    }
+  }
   return (
     <SpotifyStyles>
       <Spinner name="cube-grid" id={loaded ? 'hide' : ''} className="spotifySpinner" color="#cd6647" />
-      <div id={loaded ? 'loaded' : ''} className="spotifyWrapper">
-        <Iframe
-          url="https://open.spotify.com/embed/playlist/7m7U9TvjNUJgC0dam4RU1e"
+      <di v id={loaded ? 'loaded' : ''} className="spotifyWrapper">
+        <iframe
+          title="spotifyPlayer"
+          src="https://open.spotify.com/embed/playlist/7m7U9TvjNUJgC0dam4RU1e"
           width="100%"
           height="500px"
-          className="spotifyPlayer"
-          display="initial"
-          position="relative"
+          frameBorder="0"
+          allowtransparency="true"
           allow="encrypted-media"
-          loading="lazy"
+          onLoad={iframeLoaded()}
         />
-      </div>
+      </di>
     </SpotifyStyles>
   );
 }
