@@ -8,7 +8,7 @@ const CollageStyles = styled.div`
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(13, 1fr);
+  grid-template-columns: repeat(14, 1fr);
   gap: 0.5rem;
   .Hero {
     grid-column: span 3;
@@ -20,7 +20,7 @@ const CollageStyles = styled.div`
     grid-column: span 3;
   }
   .photo3 {
-    grid-column: span 2;
+    grid-column: span 3;
     grid-row: span 2;
   }
   .photo4 {
@@ -41,13 +41,13 @@ const CollageStyles = styled.div`
     grid-column: span 3;
   }
   .photo10 {
-    grid-column: span 2;
+    grid-column: span 3;
   }
   .photo11 {
-    grid-column: span 6;
+    grid-column: span 7;
   }
   .photo12 {
-    grid-column: span 6;
+    grid-column: span 7;
   }
   @media (max-width: 999px) {
     margin: 0;
