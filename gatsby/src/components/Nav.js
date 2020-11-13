@@ -7,7 +7,7 @@ import Logo from './Logo';
 
 const NavButtonStyles = styled.div`
   position: fixed;
-  width: 100vw;
+  width: 100%;
   bottom: 0;
   text-align: center;
   z-index: 100;
@@ -77,10 +77,14 @@ const NavStyles = styled.nav`
     background: linear-gradient(-45deg, var(--bg) 50%, var(--white) 100%);
     position: fixed;
     z-index: 5;
-    width: 100vw;
-    height: 100vh;
-    transform: translateY(100vh);
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
     transition: transform 0.5s ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     ul {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 6rem 6rem 6rem 6rem;

@@ -14,6 +14,7 @@ const LogoStyles = styled.div`
   display: flex;
   align-items: center;
   margin: 0 auto;
+  margin-top: 2rem;
   .inner {
     width: 100%;
     padding-top: 3rem;

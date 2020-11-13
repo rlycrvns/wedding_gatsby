@@ -17,6 +17,13 @@ const SpotifyStyles = styled.div`
     width: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    margin: 0 30px;
+  }
+  iframe {
+    height: 500px;
+    @media (min-width: 999px) {
+      height: 1000px;
+    }
   }
   #loaded {
     opacity: 1;
@@ -41,7 +48,6 @@ export default function SpotifyPlayer() {
           title="spotifyPlayer"
           src="https://open.spotify.com/embed/playlist/7m7U9TvjNUJgC0dam4RU1e"
           width="100%"
-          height="500px"
           frameBorder="0"
           allowtransparency="true"
           allow="encrypted-media"

@@ -18,7 +18,7 @@ const FooterStyles = styled.footer`
     }
   }
   @media (max-width: 999px) {
-    margin-bottom: 8rem;
+    margin: 0 1.5rem 8rem 1.5rem;
   }
 `;
 

@@ -14,14 +14,21 @@ export default function H1({ title }) {
       font-size: 6rem;
       color: var(--rust);
       z-index: 3;
+      margin-top: 2rem;
     }
     &::before {
-      content: url(${pinkStroke});
+      content: '';
+      background: url(${pinkStroke});
+      background-repeat: no-repeat;
+      background-position: center;
       position: absolute;
-      width: 300px;
-      height: 42px;
+      width: 100%;
+      height: 50px;
       z-index: 1;
-      transform: scale(1.5);
+      @media (min-width: 500px) {
+        transform: scale(1.5);
+        width: 300px;
+      }
     }
   `;
   return (

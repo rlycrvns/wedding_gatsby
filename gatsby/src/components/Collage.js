@@ -53,21 +53,28 @@ const CollageStyles = styled.div`
     margin: 0;
   }
   @media (max-width: 699px) {
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    .Hero {
+      grid-column: span 5;
+      grid-row: span 3;
+    }
     .photo1 {
       grid-column: span 3;
       grid-row: span 2;
     }
     .photo2 {
       grid-column: span 3;
-      grid-row: span 2;
+      grid-row: span 3;
+    }
+    .photo5 {
+      grid-column: span 2;
     }
     .photo6 {
       grid-column: span 4;
       grid-row: span 2;
     }
     .photo7 {
-      grid-column: span 3;
+      grid-column: span 4;
       grid-row: span 2;
     }
     .photo8 {
@@ -78,7 +85,7 @@ const CollageStyles = styled.div`
       grid-column: span 4;
     }
     .photo10 {
-      grid-column: span 3;
+      grid-column: span 4;
     }
     .photo11 {
       grid-column: span 11;
