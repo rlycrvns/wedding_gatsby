@@ -35,13 +35,6 @@ const NavStyles = styled.nav`
   }
   li {
     text-align: center;
-    background: url(${bgBrush});
-    background-repeat: no-repeat;
-    background-size: 22rem;
-    background-position: top;
-    @media (max-width: 1199px) {
-      background-size: 18rem;
-    }
   }
   .logoLink {
     transition: all 0.25s ease-in-out;
@@ -52,6 +45,13 @@ const NavStyles = styled.nav`
     }
   }
   .nav-link {
+    background: url(${bgBrush});
+    background-repeat: no-repeat;
+    background-size: 22rem;
+    background-position: top;
+    @media (max-width: 1199px) {
+      background-size: 18rem;
+    }
     a {
       display: block;
       font-family: 'HeadingReg';
