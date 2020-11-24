@@ -6,7 +6,7 @@ const SpotifyStyles = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   .spotifySpinner {
     width: 100px;
     height: 100px;
