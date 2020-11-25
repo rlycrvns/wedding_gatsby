@@ -3,7 +3,7 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 
 const CollageStyles = styled.div`
-  background-color: var(--rust);
+  background-color: var(--pink);
   margin-top: 5rem;
   position: relative;
   z-index: 1;
