@@ -1,0 +1,22 @@
+<svg className="logo-svg" viewBox="0 0 800 800">
+    <title>Logo</title>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Border" fill="#718878" x="0" y="0" width="800" height="800"></rect>
+        <rect id="Rectangle" fill="#FEE5E0" x="20" y="20" width="760" height="760"></rect>
+        <text id="J" font-family="LaBelleAurore, La Belle Aurore" font-size="260" font-weight="normal" fill="#718878">
+            <tspan x="115" y="300">J</tspan>
+        </text>
+        <text id="R" font-family="LaBelleAurore, La Belle Aurore" font-size="300" font-weight="normal" fill="#718878">
+            <tspan x="92" y="723">R</tspan>
+        </text>
+        <text id="+" font-family="LaBelleAurore, La Belle Aurore" font-size="218" font-weight="normal" fill="#CD6647">
+            <tspan x="357" y="458">+</tspan>
+        </text>
+        <text id="B" font-family="LaBelleAurore, La Belle Aurore" font-size="300" font-weight="normal" fill="#718878">
+            <tspan x="520" y="306">B</tspan>
+        </text>
+        <text id="C" font-family="LaBelleAurore, La Belle Aurore" font-size="300" font-weight="normal" fill="#718878">
+            <tspan x="520" y="723">C</tspan>
+        </text>
+    </g>
+</svg>
