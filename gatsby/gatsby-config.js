@@ -21,5 +21,13 @@ export default {
         token: process.env.SANITY_TOKEN,
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
   ],
 };
