@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { MdClose, MdMenu } from 'react-icons/md';
-import bgBrush from '../assets/images/lite-green-stroke.svg';
+import BgBrush from '../assets/images/lite-green-stroke.svg';
 import Logo from './Logo';
 
 const NavButtonStyles = styled.div`
@@ -28,6 +28,7 @@ const NavButtonStyles = styled.div`
 
 const NavStyles = styled.nav`
   margin: 0 1.5rem;
+  overflow-x: hidden;
   ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -45,19 +46,22 @@ const NavStyles = styled.nav`
     }
   }
   .nav-link {
-    background: url(${bgBrush});
-    background-repeat: no-repeat;
-    background-size: 22rem;
-    background-position: top;
-    @media (max-width: 1199px) {
-      background-size: 18rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .link-bg {
+      position: absolute;
+      width: 25rem;
+      z-index: 14;
     }
     a {
+      position: relative;
+      z-index: 15;
       display: block;
       font-family: 'HeadingReg';
       color: var(--rust);
       font-size: 2rem;
-      z-index: 2;
       transition: all 0.25s ease-in-out;
       &:hover,
       &:active,
@@ -76,7 +80,7 @@ const NavStyles = styled.nav`
     margin: 0;
     background: linear-gradient(-45deg, var(--bg) 50%, var(--white) 100%);
     position: fixed;
-    z-index: 5;
+    z-index: 20;
     width: 100%;
     height: 100%;
     transform: translateY(100%);
@@ -86,6 +90,7 @@ const NavStyles = styled.nav`
     right: 0;
     bottom: 0;
     ul {
+      padding-top: 5rem;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 6rem 6rem 6rem 6rem;
       align-items: center;
@@ -104,13 +109,17 @@ const NavStyles = styled.nav`
 `;
 
 function NavButton({ navOpen, setNavOpen }) {
+  function NavClick() {
+    setNavOpen((prevnavOpen) => !prevnavOpen);
+    if (!navOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }
   return (
     <NavButtonStyles>
-      <button
-        onClick={() => setNavOpen((prevnavOpen) => !prevnavOpen)}
-        aria-expanded={navOpen === true ? 'true' : 'false'}
-        type="button"
-      >
+      <button onClick={() => NavClick()} aria-expanded={navOpen === true ? 'true' : 'false'} type="button">
         {navOpen ? <MdClose /> : <MdMenu />}
       </button>
     </NavButtonStyles>
@@ -120,6 +129,7 @@ function NavButton({ navOpen, setNavOpen }) {
 function NavLink({ data, setNavOpen, className }) {
   return (
     <li className={className}>
+      <BgBrush />
       <Link onClick={() => setNavOpen(false)} to={data.url}>
         {data.name}{' '}
       </Link>
