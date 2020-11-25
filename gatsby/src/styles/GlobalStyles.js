@@ -74,6 +74,7 @@ const GlobalStyles = createGlobalStyle`
 
   .nav-open.nav-open {
     transform: translateY(0);
+    overflow: hidden;
   }
   #hide {
     display: none;
