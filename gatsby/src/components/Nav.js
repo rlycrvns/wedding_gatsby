@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 import { MdClose, MdMenu } from 'react-icons/md';
+import { gsap } from 'gsap/gsap-core';
 import BgBrush from '../assets/images/lite-green-stroke.svg';
 import Logo from './Logo';
 
@@ -127,6 +128,15 @@ function NavButton({ navOpen, setNavOpen }) {
 }
 
 function NavLink({ data, setNavOpen, className }) {
+  const t1 = gsap.timeline({ delay: 0.5 });
+
+  useEffect(() => {
+    t1.fromTo(
+      '.link-bg',
+      { scaleX: 0, opacity: 0, transformOrigin: 'left' },
+      { delay: 1, duration: 1, scale: 1, opacity: 1, ease: 'slow' }
+    );
+  }, []);
   return (
     <li className={className}>
       <BgBrush />
