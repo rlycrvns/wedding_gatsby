@@ -1,3 +1,4 @@
+import gsap from 'gsap/gsap-core';
 import React, { useState } from 'react';
 import Spinner from 'react-spinkit';
 import styled from 'styled-components';
@@ -25,9 +26,6 @@ const SpotifyStyles = styled.div`
       height: 1000px;
     }
   }
-  #loaded {
-    opacity: 1;
-  }
 `;
 
 export default function SpotifyPlayer() {
@@ -37,13 +35,14 @@ export default function SpotifyPlayer() {
     if (!loaded) {
       setTimeout(() => {
         setLoaded(true);
+        gsap.fromTo('.spotifyWrapper', { opacity: 0 }, { duration: 1.5, opacity: 1, ease: 'bounce.out' });
       }, 2000);
     }
   }
   return (
     <SpotifyStyles>
       <Spinner name="cube-grid" id={loaded ? 'hide' : ''} className="spotifySpinner" color="#cd6647" />
-      <di v id={loaded ? 'loaded' : ''} className="spotifyWrapper">
+      <div className="spotifyWrapper">
         <iframe
           title="spotifyPlayer"
           src="https://open.spotify.com/embed/playlist/7m7U9TvjNUJgC0dam4RU1e"
@@ -53,7 +52,7 @@ export default function SpotifyPlayer() {
           allow="encrypted-media"
           onLoad={iframeLoaded()}
         />
-      </di>
+      </div>
     </SpotifyStyles>
   );
 }

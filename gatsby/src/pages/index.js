@@ -1,12 +1,16 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Collage from '../components/Collage';
 import SEO from '../components/SEO';
 import DetailsBG from '../assets/images/index-title-bg.svg';
 import H1Stroke from '../assets/images/pink-stroke.svg';
 import H1StrokeInv from '../assets/images/pink-stroke-inverted.svg';
 import Logo from '../components/Logo';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const MainStyles = styled.main`
   margin-top: 0;
@@ -103,6 +107,40 @@ const DetailsStyles = styled.div`
 `;
 
 function HomeH1() {
+  const t1 = gsap.timeline();
+  useEffect(() => {
+    t1.fromTo(
+      '.top-bg',
+      {
+        scaleX: 0,
+        transformOrigin: 'left',
+      },
+      {
+        scrollTrigger: {
+          trigger: '.heading-container',
+          start: 'top bottom-=200px',
+        },
+        duration: 2,
+        scaleX: 1,
+        ease: 'slow',
+      }
+    ).fromTo(
+      '.bottom-bg',
+      {
+        scaleX: 0,
+        transformOrigin: 'right',
+      },
+      {
+        scrollTrigger: {
+          trigger: '.heading-container',
+          start: 'top bottom-=200px',
+        },
+        duration: 2,
+        scaleX: 1,
+        ease: 'slow',
+      }
+    );
+  }, []);
   return (
     <H1Styles className="heading-container">
       <h1>
@@ -116,6 +154,25 @@ function HomeH1() {
   );
 }
 function Details() {
+  useEffect(() => {
+    gsap.fromTo(
+      '.details-bg',
+      {
+        scaleX: 0,
+        transformOrigin: 'left',
+      },
+      {
+        scrollTrigger: {
+          trigger: '.details-container',
+          start: 'top bottom-=100px',
+        },
+        delay: 0.5,
+        duration: 2,
+        scaleX: 1,
+        ease: 'slow',
+      }
+    );
+  }, []);
   return (
     <DetailsStyles className="details-container">
       <DetailsBG />

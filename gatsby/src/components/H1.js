@@ -1,4 +1,5 @@
-import React from 'react';
+import gsap from 'gsap/gsap-core';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import PinkStroke from '../assets/images/pink-stroke.svg';
 
@@ -23,6 +24,13 @@ export default function H1({ title }) {
       margin-top: 2rem;
     }
   `;
+  useEffect(() => {
+    gsap.fromTo(
+      '.top-bg',
+      { scaleX: 0, transformOrigin: 'left' },
+      { delay: 1, duration: 1.5, scaleX: 1, ease: 'power4.out' }
+    );
+  }, []);
   return (
     <PlaylistStyles>
       <PinkStroke />

@@ -21,7 +21,7 @@ export default function Logo() {
     t1.fromTo(
       '.logo-bg',
       { scale: 0, opacity: 0, transformOrigin: 'center' },
-      { duration: 0.75, scale: 1, opacity: 1, ease: 'back.out(1.4)' }
+      { delay: 0.5, duration: 0.75, scale: 1, opacity: 1, ease: 'back.out(1.4)' }
     )
       .fromTo(
         '.logo-jb',

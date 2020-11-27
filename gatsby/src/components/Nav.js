@@ -128,13 +128,11 @@ function NavButton({ navOpen, setNavOpen }) {
 }
 
 function NavLink({ data, setNavOpen, className }) {
-  const t1 = gsap.timeline({ delay: 0.5 });
-
   useEffect(() => {
-    t1.fromTo(
+    gsap.fromTo(
       '.link-bg',
       { scaleX: 0, opacity: 0, transformOrigin: 'left' },
-      { delay: 1, duration: 1, scale: 1, opacity: 1, ease: 'slow' }
+      { delay: 1, duration: 1, scaleX: 1, opacity: 1, ease: 'slow' }
     );
   }, []);
   return (
