@@ -147,6 +147,7 @@ export const query = graphql`
   query PhotoQuery {
     photos: allSanityPhotos(sort: { fields: _createdAt }) {
       nodes {
+        id
         name
         image {
           asset {
