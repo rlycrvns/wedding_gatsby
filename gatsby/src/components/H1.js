@@ -12,7 +12,10 @@ export default function H1({ title }) {
     .top-bg {
       position: absolute;
       z-index: 2;
-      width: 40rem;
+      width: 100%;
+      @media (min-width: 400px) {
+        width: 40rem;
+      }
     }
     h1 {
       position: relative;
