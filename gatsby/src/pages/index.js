@@ -154,25 +154,6 @@ function HomeH1() {
   );
 }
 function Details() {
-  useEffect(() => {
-    gsap.fromTo(
-      '.details-bg',
-      {
-        scaleX: 0,
-        transformOrigin: 'left',
-      },
-      {
-        scrollTrigger: {
-          trigger: '.details-container',
-          start: 'top bottom-=100px',
-        },
-        delay: 0.5,
-        duration: 2,
-        scaleX: 1,
-        ease: 'slow',
-      }
-    );
-  }, []);
   return (
     <DetailsStyles className="details-container">
       <DetailsBG />

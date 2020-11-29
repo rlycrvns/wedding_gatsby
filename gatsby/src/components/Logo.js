@@ -23,25 +23,13 @@ export default function Logo() {
       { scale: 0, opacity: 0, transformOrigin: 'center' },
       { delay: 0.5, duration: 0.75, scale: 1, opacity: 1, ease: 'back.out(1.4)' }
     )
-      .fromTo(
-        '.logo-jb',
-        { scaleY: 0, opacity: 0, transformOrigin: 'top' },
-        { scaleY: 1, opacity: 1, duration: 1, ease: 'bounce.out' }
-      )
-      .fromTo(
-        '.logo-rc',
-        { scaleY: 0, opacity: 0, transformOrigin: 'top' },
-        { scaleY: 1, opacity: 1, duration: 1, ease: 'bounce.out' }
-      )
-      .fromTo(
-        '.logo-border',
-        { scale: 0, transformOrigin: 'top left' },
-        { scale: 1, duration: 0.5, ease: 'bounce.out' }
-      )
+      .fromTo('.logo-jb', { opacity: 0, transformOrigin: 'center' }, { opacity: 1, duration: 1, ease: 'power2.out' })
+      .fromTo('.logo-rc', { opacity: 0, transformOrigin: 'center' }, { opacity: 1, duration: 1, ease: 'power2.out' })
+      .fromTo('.logo-border', { scale: 0, transformOrigin: 'top left' }, { scale: 1, duration: 0.5, ease: 'circ.out' })
       .fromTo(
         '.logo-plus',
         { scale: 0, opacity: 0, transformOrigin: 'center' },
-        { scale: 1, opacity: 1, ease: 'back.out(3)' }
+        { scale: 1, opacity: 1, ease: 'back.out(1.4)' }
       );
   }, []);
   return (
