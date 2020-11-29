@@ -35,7 +35,7 @@ export default function SpotifyPlayer() {
     if (!loaded) {
       setTimeout(() => {
         setLoaded(true);
-        gsap.fromTo('.spotifyWrapper', { opacity: 0 }, { duration: 1.5, opacity: 1, ease: 'bounce.out' });
+        gsap.fromTo('.spotifyWrapper', { opacity: 0 }, { duration: 1.5, opacity: 1, ease: 'none' });
       }, 2000);
     }
   }
