@@ -6,19 +6,19 @@ const SinglePostStyles = styled.div`
   margin: 1rem;
   padding: 1rem 1rem 0 1rem;
   background-color: var(--pink);
-  border-radius: 0.2rem;
-  box-shadow: 0px 0px 5px 0px var(--black);
+  box-shadow: 1px 1px 5px 0px var(--grey);
   @media (max-width: 799px) {
     width: 95%;
   }
   .gatsby-image-wrapper {
-    border-radius: 0.2rem;
+    border-radius: 0.5rem;
     width: 250px;
     @media (max-width: 799px) {
       width: 100%;
     }
   }
   p {
+    border-radius: 0.2rem;
     font-family: BodySemi;
     font-size: 2rem;
     background-color: var(--pale-green);
@@ -27,8 +27,11 @@ const SinglePostStyles = styled.div`
     font-weight: 400;
     transform: rotate(-2deg);
     margin-top: -2rem;
+    padding: 0.5rem 0;
     @media (min-width: 800px) {
-      width: 250px;
+      width: 240px;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 `;
@@ -49,7 +52,7 @@ const PostStyles = styled.div`
     height: 7000px;
   }
   @media (min-width: 1500px) {
-    height: 5200px;
+    height: 5100px;
   }
 `;
 
