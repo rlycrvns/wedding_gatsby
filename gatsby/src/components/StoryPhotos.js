@@ -6,7 +6,6 @@ const SinglePostStyles = styled.div`
   margin: 1rem;
   padding: 1rem 1rem 0 1rem;
   background-color: var(--pink);
-  box-shadow: 1px 1px 5px 0px var(--grey);
   @media (max-width: 799px) {
     width: 95%;
   }
@@ -19,12 +18,11 @@ const SinglePostStyles = styled.div`
   }
   p {
     border-radius: 0.2rem;
-    font-family: BodySemi;
+    font-family: HeadingReg;
     font-size: 2rem;
     background-color: var(--pale-green);
     width: 100%;
     margin-bottom: 1.5rem;
-    font-weight: 400;
     transform: rotate(-2deg);
     margin-top: -2rem;
     padding: 0.5rem 0;
