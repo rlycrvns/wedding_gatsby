@@ -6,7 +6,7 @@ const FooterStyles = styled.footer`
   margin-bottom: 2rem;
   p {
     font-size: 1.5rem;
-    font-family: 'BodySemi';
+    font-family: 'BodyBold';
   }
   a {
     color: var(--green);
