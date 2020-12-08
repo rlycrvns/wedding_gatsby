@@ -6,7 +6,7 @@ const FooterStyles = styled.footer`
   margin-bottom: 2rem;
   p {
     font-size: 1.5rem;
-    font-family: 'BodyBold';
+    font-family: 'Body';
   }
   a {
     color: var(--green);
@@ -18,16 +18,13 @@ const FooterStyles = styled.footer`
     }
   }
   @media (max-width: 999px) {
-    margin: 0 1.5rem 8rem 1.5rem;
+    margin: 10rem 1.5rem 8rem 1.5rem;
   }
 `;
 
 export default function Footer() {
   return (
     <FooterStyles>
-      <p className="center">
-        Made with ❤️ 🤬 🍕 by <a href="https://github.com/rlycrvns">Riley Cravens</a> ©{new Date().getFullYear()}
-      </p>
       <p className="center">
         Photography by
         <a href="https://michellebreiterphotography.com/"> Michelle Breiter Photography</a>
