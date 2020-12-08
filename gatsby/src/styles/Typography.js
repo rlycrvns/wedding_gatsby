@@ -19,6 +19,12 @@ const Typography = createGlobalStyle`
   a {
     color: var(--green);
     text-decoration: none;
+    transition: color 0.25s ease-ease-in-out;
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--rust);
+    }
   }
   .center {
     text-align: center;
