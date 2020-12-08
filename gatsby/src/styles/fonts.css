@@ -8,9 +8,13 @@
 }
 @font-face {
   font-family: 'Body';
-  src: url('../assets/fonts/OpenSans-Regular.woff2') format('woff2');
+  src: url('../assets/fonts/Raleway-Regular.woff2') format('woff2');
 }
 @font-face {
   font-family: 'BodyBold';
-  src: url('../assets/fonts/OpenSans-Bold.woff2') format('woff2');
+  src: url('../assets/fonts/Raleway-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'BodyLight';
+  src: url('../assets/fonts/Raleway-Light.woff2') format('woff2');
 }
