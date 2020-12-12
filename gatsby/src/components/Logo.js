@@ -21,11 +21,11 @@ export default function Logo() {
     t1.fromTo(
       '.logo-bg',
       { scale: 0, opacity: 0, transformOrigin: 'center' },
-      { delay: 0.5, duration: 0.75, scale: 1, opacity: 1, ease: 'back.out(1.4)' }
+      { delay: 0.5, duration: 1, scale: 1, opacity: 1, ease: 'back.out(1.4)' }
     )
-      .fromTo('.logo-jb', { opacity: 0, transformOrigin: 'center' }, { opacity: 1, duration: 1, ease: 'power2.out' })
-      .fromTo('.logo-rc', { opacity: 0, transformOrigin: 'center' }, { opacity: 1, duration: 1, ease: 'power2.out' })
-      .fromTo('.logo-border', { scale: 0, transformOrigin: 'top left' }, { scale: 1, duration: 0.5, ease: 'circ.out' })
+      .fromTo('.logo-jb', { opacity: 0, transformOrigin: 'center' }, { opacity: 1, duration: 0.5, ease: 'power2.out' })
+      .fromTo('.logo-rc', { opacity: 0, transformOrigin: 'center' }, { opacity: 1, duration: 0.5, ease: 'power2.out' })
+      .fromTo('.logo-border', { scale: 0, transformOrigin: 'top left' }, { scale: 1, ease: 'power1.out' })
       .fromTo(
         '.logo-plus',
         { scale: 0, opacity: 0, transformOrigin: 'center' },
