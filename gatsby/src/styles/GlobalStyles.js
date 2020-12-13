@@ -10,8 +10,8 @@ const GlobalStyles = createGlobalStyle`
     --pink: #fee5e0;
     --green: #718878;
     --grey: #707070;
-    --pale-green-alpha: rgba(196, 208, 204, 0.4);
-    --pink-alpha: rgba(254, 229, 224, 0.4);
+    --pale-green-alpha: rgba(196, 208, 204, 0.5);
+    --pink-alpha: rgba(254, 229, 224, 0.5);
   }
   html {
     background: var(--bg);
