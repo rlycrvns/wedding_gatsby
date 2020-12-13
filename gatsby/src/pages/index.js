@@ -97,12 +97,13 @@ const DetailsStyles = styled.div`
     color: var(--white);
     font-size: clamp(4rem, 3.5vw, 7rem);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     @media (min-width: 1000px) {
       margin: 12rem 0;
     }
-  }
-  span {
-    display: block;
   }
 `;
 

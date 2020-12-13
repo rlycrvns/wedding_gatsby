@@ -6,6 +6,7 @@ import SpotifyPlayer from '../components/SpotifyPlayer';
 const PlaylistStyles = styled.div`
   margin-bottom: 5rem;
   p {
+    font-family: 'BodyLight';
     text-align: center;
     font-size: 2.5rem;
   }

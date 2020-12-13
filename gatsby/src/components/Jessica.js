@@ -18,7 +18,8 @@ const ProfileStyles = styled.div`
   }
   .content {
     font-size: 2rem;
-    color: vaR(--black);
+    color: var(--black);
+    font-family: 'BodyLight';
   }
 `;
 

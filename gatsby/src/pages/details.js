@@ -9,8 +9,9 @@ const ItemStyles = styled.div`
   h2 {
     text-align: center;
     color: var(--rust);
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-size: clamp(3.5rem, 6vw, 5rem);
     font-family: HeadingCursive;
+    margin-bottom: 1rem;
   }
   ul {
     margin: 0;
@@ -39,7 +40,7 @@ const ItemStyles = styled.div`
   }
   p {
     max-width: 200px;
-    font-family: 'BodyLight';
+    font-family: 'HeadingReg';
     text-align: left;
     font-size: clamp(1.6rem, 1.5vw, 2rem);
     font-weight: 400;

@@ -17,8 +17,9 @@ const ProfileStyles = styled.div`
     font-family: HeadingReg;
   }
   .content {
+    font-family: 'BodyLight';
     font-size: 2rem;
-    color: vaR(--black);
+    color: var(--black);
   }
 `;
 
