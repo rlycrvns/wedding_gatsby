@@ -10,6 +10,7 @@ export default {
       "Jessica Baron and Riley Cravens are to be wed on September 5, 2021 at Scholl's Valley Lodge in Portland, OR",
   },
   plugins: [
+    `gatsby-plugin-sass`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
