@@ -49,6 +49,9 @@ export const query = graphql`
       nodes {
         id
         caption
+        slug {
+          current
+        }
         image {
           asset {
             fluid {
