@@ -13,7 +13,7 @@ const PhotoStyle = styled.div`
   .gatsby-image-wrapper {
     width: 100%;
     max-width: 1200px;
-    margin: 4rem 10vw;
+    margin: 4rem auto;
   }
 
   a {
