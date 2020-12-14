@@ -1,22 +1,42 @@
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import SEO from '../components/SEO';
 
-const PhotoGrid = styled.div`
+const PhotoStyle = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .gatsby-image-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem 10vw;
+  }
+
+  a {
+    font-family: 'HeadingCursive';
+    font-size: 4rem;
+    color: var(--green);
+    transition: color 0.25s ease-in-out;
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--rust);
+    }
+  }
 `;
 
 export default function SinglePhotoPage({ data: { photo } }) {
   return (
     <>
       <SEO title="Photo" image={photo.image?.asset?.fluid?.src} />
-      <PhotoGrid>
+      <PhotoStyle>
         <Img fluid={photo.image.asset.fluid} />
-      </PhotoGrid>
+        <Link to="/">Back</Link>
+      </PhotoStyle>
     </>
   );
 }
