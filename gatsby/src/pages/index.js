@@ -188,6 +188,9 @@ export const query = graphql`
       nodes {
         id
         name
+        slug {
+          current
+        }
         image {
           asset {
             fluid {
