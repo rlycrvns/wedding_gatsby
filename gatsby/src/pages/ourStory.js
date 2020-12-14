@@ -5,6 +5,7 @@ import H1 from '../components/H1';
 import Jessica from '../components/Jessica';
 import Riley from '../components/Riley';
 import StoryPhotos from '../components/StoryPhotos';
+import SEO from '../components/SEO';
 
 const PageStyles = styled.div`
   .history {
@@ -27,15 +28,18 @@ const StoriesStyles = styled.div`
 export default function OurStory({ data }) {
   const posts = data.posts.nodes;
   return (
-    <PageStyles>
-      <H1 title="Our Story" />
-      <StoriesStyles>
-        <Jessica posts={posts.slice(0, 1)} />
-        <Riley posts={posts.slice(1, 2)} />
-      </StoriesStyles>
-      <h3 className="history">March 17th, 2017 - Our journey began with our first date and the rest is history...</h3>
-      <StoryPhotos posts={posts.slice(2)} />
-    </PageStyles>
+    <>
+      <SEO title="Our Story" />
+      <PageStyles>
+        <H1 title="Our Story" />
+        <StoriesStyles>
+          <Jessica posts={posts.slice(0, 1)} />
+          <Riley posts={posts.slice(1, 2)} />
+        </StoriesStyles>
+        <h3 className="history">March 17th, 2017 - Our journey began with our first date and the rest is history...</h3>
+        <StoryPhotos posts={posts.slice(2)} />
+      </PageStyles>
+    </>
   );
 }
 

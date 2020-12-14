@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import H1 from '../components/H1';
 import SpotifyPlayer from '../components/SpotifyPlayer';
+import SEO from '../components/SEO';
 
 const PlaylistStyles = styled.div`
   margin-bottom: 5rem;
@@ -23,6 +24,7 @@ const PlaylistStyles = styled.div`
 export default function PlaylistPage() {
   return (
     <>
+      <SEO title="Playlist" />
       <PlaylistStyles>
         <H1 title="Playlist" />
         <p>Help us build the perfect playlist for our reception!</p>

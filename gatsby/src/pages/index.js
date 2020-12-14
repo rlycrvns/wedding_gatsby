@@ -170,7 +170,7 @@ export default function HomePage({ data }) {
   const photos = data.photos.nodes;
   return (
     <>
-      <SEO />
+      <SEO title="Home" />
       <MainStyles>
         <Logo />
         <Collage photos={photos.slice(0, 11)} />

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FaDirections } from 'react-icons/fa';
 import H1 from '../components/H1';
 import '../styles/hexGrid.scss';
+import SEO from '../components/SEO';
 
 const ItemStyles = styled.div`
   margin-top: 5rem;
@@ -85,6 +86,7 @@ const ItemStyles = styled.div`
 export default function Details() {
   return (
     <>
+      <SEO title="Details" />
       <H1 title="Details" />
       <div className="details">
         <ul className="details__list">
