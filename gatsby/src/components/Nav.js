@@ -135,10 +135,15 @@ function NavLink({ data, setNavOpen, className }) {
       { delay: 1, duration: 1, scaleX: 1, opacity: 1, ease: 'slow' }
     );
   }, []);
+
+  function LinkClick() {
+    setNavOpen(false);
+    document.body.style.overflow = 'unset';
+  }
   return (
     <li className={className}>
       <BgBrush />
-      <Link onClick={() => setNavOpen(false)} to={data.url}>
+      <Link onClick={() => LinkClick()} to={data.url}>
         {data.name}{' '}
       </Link>
     </li>
