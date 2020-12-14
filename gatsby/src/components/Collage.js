@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const CollageStyles = styled.div`
   background-color: var(--pink);
@@ -10,6 +11,17 @@ const CollageStyles = styled.div`
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   gap: 0.5rem;
+  .gatsby-image-wrapper {
+    height: 100%;
+  }
+  a {
+    transition: all 0.5s ease-in-out;
+    &:hover,
+    &:active,
+    &:focus {
+      transform: scale(0.8);
+    }
+  }
   .photo0 {
     grid-column: span 3;
   }
@@ -54,7 +66,7 @@ const CollageStyles = styled.div`
   }
   @media (max-width: 699px) {
     grid-template-columns: repeat(8, 1fr);
-    .Hero {
+    .photo0 {
       grid-column: span 5;
       grid-row: span 3;
     }
@@ -97,7 +109,11 @@ const CollageStyles = styled.div`
 `;
 
 function SinglePhoto({ photo }) {
-  return <Img className={photo.name} fluid={photo.image.asset.fluid} alt="" />;
+  return (
+    <Link className={photo.name} to={`/${photo.slug.current}`}>
+      <Img fluid={photo.image.asset.fluid} alt="" />
+    </Link>
+  );
 }
 
 export default function Collage({ photos }) {
