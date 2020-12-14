@@ -10,7 +10,7 @@ const CollageStyles = styled.div`
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   gap: 0.5rem;
-  .Hero {
+  .photo0 {
     grid-column: span 3;
   }
   .photo1 {
