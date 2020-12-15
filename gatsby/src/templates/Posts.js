@@ -59,7 +59,7 @@ export default function SinglePostPage({ data: { post } }) {
           <Img fluid={post.image.asset.fluid} />
           <h1>{post.caption}</h1>
         </div>
-        <Link to="/ourStory">Back</Link>
+        <Link to={`/ourStory#${post.name}`}>Back</Link>
       </PostGrid>
     </>
   );
@@ -68,7 +68,7 @@ export const query = graphql`
   query($slug: String!) {
     post: sanityPosts(slug: { current: { eq: $slug } }) {
       caption
-      id
+      name
       image {
         asset {
           fluid(maxWidth: 1200) {
