@@ -65,7 +65,7 @@ const PostStyles = styled.div`
 
 function SinglePost({ post }) {
   return (
-    <Link to={`/${post.slug.current}`}>
+    <Link id={`${post.name}`} to={`/${post.slug.current}`}>
       <Img fluid={post.image.asset.fluid} alt="" />
       <p>{post.caption}</p>
     </Link>
