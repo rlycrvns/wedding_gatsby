@@ -7,6 +7,12 @@ export default {
   icon,
   fields: [
     {
+      name: 'name',
+      title: 'Name',
+      type: 'string',
+      description: 'ID for the photo',
+    },
+    {
       name: 'caption',
       title: 'Caption',
       type: 'string',
