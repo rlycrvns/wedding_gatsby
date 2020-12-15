@@ -31,6 +31,7 @@ async function turnPostsIntoPages({ graphql, actions }) {
     query {
       posts: allSanityPosts {
         nodes {
+          name
           caption
           slug {
             current

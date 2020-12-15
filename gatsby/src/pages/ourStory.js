@@ -48,6 +48,7 @@ export const query = graphql`
     posts: allSanityPosts(sort: { fields: _createdAt }) {
       nodes {
         id
+        name
         caption
         slug {
           current
