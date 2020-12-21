@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import LogoSVG from '../assets/images/logo.svg';
+import LogoSVG from '../assets/images/logo-paths.svg';
 
 const LogoStyles = styled.div`
   font-size: 0.8rem;
@@ -15,7 +15,7 @@ const LogoStyles = styled.div`
 `;
 
 export default function Logo() {
-  const t1 = gsap.timeline({ delay: 0.5 });
+  const t1 = gsap.timeline();
 
   useEffect(() => {
     t1.fromTo(
@@ -23,14 +23,16 @@ export default function Logo() {
       { scale: 0, opacity: 0, transformOrigin: 'center' },
       { delay: 0.5, duration: 1, scale: 1, opacity: 1, ease: 'back.out(1.4)' }
     )
-      .fromTo('.logo-jb', { opacity: 0, transformOrigin: 'center' }, { opacity: 1, duration: 0.5, ease: 'power2.out' })
-      .fromTo('.logo-rc', { opacity: 0, transformOrigin: 'center' }, { opacity: 1, duration: 0.5, ease: 'power2.out' })
-      .fromTo('.logo-border', { scale: 0, transformOrigin: 'top left' }, { scale: 1, ease: 'power1.out' })
+      .fromTo('.letter-j', { opacity: 0, transformOrigin: 'center' }, { opacity: 1, duration: 0.5, ease: 'power2.out' })
+      .fromTo('.letter-b', { opacity: 0, transformOrigin: 'center' }, { opacity: 1, duration: 0.5, ease: 'power2.out' })
+      .fromTo('.letter-r', { opacity: 0, transformOrigin: 'center' }, { opacity: 1, duration: 0.5, ease: 'power2.out' })
+      .fromTo('.letter-c', { opacity: 0, transformOrigin: 'center' }, { opacity: 1, duration: 0.5, ease: 'power2.out' })
       .fromTo(
         '.logo-plus',
         { scale: 0, opacity: 0, transformOrigin: 'center' },
         { scale: 1, opacity: 1, ease: 'back.out(1.4)' }
-      );
+      )
+      .fromTo('.logo-border', { strokeWidth: 0 }, { strokeWidth: 20, ease: 'none' });
   }, []);
   return (
     <LogoStyles className="logo">
