@@ -19,7 +19,9 @@ const CollageStyles = styled.div`
     &:hover,
     &:active,
     &:focus {
-      transform: scale(0.9);
+      @media (min-width: 800px) {
+        transform: scale(0.9);
+      }
     }
   }
   .photo0 {
