@@ -22,7 +22,6 @@ const PostStyles = styled.div`
     height: 5100px;
   }
   a {
-    /* width: 100%; */
     margin: 1rem;
     padding: 1rem 1rem 0 1rem;
     background-color: var(--pink);
@@ -30,7 +29,9 @@ const PostStyles = styled.div`
     &:hover,
     &:active,
     &:focus {
-      transform: scale(0.9);
+      @media (min-width: 800px) {
+        transform: scale(0.9);
+      }
     }
     @media (max-width: 799px) {
       width: 80%;
