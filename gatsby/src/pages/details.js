@@ -151,9 +151,6 @@ export default function Details() {
                 <li>
                   <p>Ceremony and Reception Site are accessible without stairs</p>
                 </li>
-                <li>
-                  <p>Ceremony will be held on a lawn, beware of heels</p>
-                </li>
               </ul>
             </ItemStyles>
           </li>
