@@ -26,7 +26,6 @@ const PlaylistStyles = styled.div`
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
-    border: 2px solid var(--green);
     border-radius: 2rem;
     box-shadow: 0 20px 50px rgba(113, 136, 120, 0.7);
     &:hover,
