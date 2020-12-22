@@ -13,6 +13,11 @@ const ItemStyles = styled.div`
     font-size: clamp(3.5rem, 6vw, 5rem);
     font-family: HeadingCursive;
     margin-bottom: 1rem;
+    span {
+      @media (max-width: 799px) {
+        display: block;
+      }
+    }
   }
   ul {
     margin: 0;
@@ -170,16 +175,15 @@ export default function Details() {
           </li>
           <li className="item">
             <ItemStyles className="item__content">
-              <h2>Food and Drink</h2>
+              <h2>
+                <span>Food</span> <span>&</span> <span>Drink</span>
+              </h2>
               <ul>
                 <li>
                   <p>Appetizers followed by Light Meal</p>
                 </li>
                 <li>
-                  <p>Curated Beer and wine bar along with non-alcoholic beverages</p>
-                </li>
-                <li>
-                  <p>Survey to determine dietary restriction needs will be included in formal invitation</p>
+                  <p>Beer and wine bar along with NA beverages</p>
                 </li>
               </ul>
             </ItemStyles>
@@ -209,7 +213,9 @@ export default function Details() {
           </li>
           <li className="item">
             <ItemStyles className="item__content">
-              <h2>Unplugged Ceremony</h2>
+              <h2>
+                <span>Unplugged</span> <span>Ceremony</span>
+              </h2>
               <ul>
                 <li>
                   <p>
