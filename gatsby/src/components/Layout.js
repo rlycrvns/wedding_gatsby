@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from './Footer';
 import Nav from './Nav';
 import 'normalize.css';
 import '../styles/fonts.css';
@@ -14,8 +13,7 @@ export default function Layout({ children }) {
       <header>
         <Nav />
       </header>
-      {children}
-      <Footer />
+      <main>{children}</main>
     </>
   );
 }
