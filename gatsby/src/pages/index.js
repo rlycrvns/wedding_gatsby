@@ -107,6 +107,23 @@ const DetailsStyles = styled.div`
   }
 `;
 
+const PhotogInfoStyles = styled.div`
+  margin-top: 5rem;
+  p {
+    font-size: 1.5rem;
+    font-family: 'Body';
+  }
+  a {
+    color: var(--green);
+    transition: color 0.25s ease-in-out;
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--rust);
+    }
+  }
+`;
+
 function HomeH1() {
   const t1 = gsap.timeline();
   useEffect(() => {
@@ -177,6 +194,12 @@ export default function HomePage({ data }) {
         <HomeH1 />
         <Details />
         <Collage photos={photos.slice(11, 13)} />
+        <PhotogInfoStyles>
+          <p className="center">
+            Photography by
+            <a href="https://michellebreiterphotography.com/"> Michelle Breiter Photography</a>
+          </p>
+        </PhotogInfoStyles>
       </MainStyles>
     </>
   );
