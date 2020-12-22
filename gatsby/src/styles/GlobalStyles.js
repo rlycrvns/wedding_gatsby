@@ -24,6 +24,10 @@ const GlobalStyles = createGlobalStyle`
     overflow-x: hidden;
   }
 
+  main {
+    margin-bottom: 20rem;
+  }
+
   fieldset {
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;
