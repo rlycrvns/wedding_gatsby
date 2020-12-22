@@ -7,10 +7,13 @@ const RSVPStyles = styled.div`
   p {
     text-align: center;
     font-family: 'BodyLight';
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     width: 80%;
     margin: auto;
     margin-top: 4rem;
+    @media (min-width: 800px) {
+      font-size: 4.5rem;
+    }
   }
 `;
 
