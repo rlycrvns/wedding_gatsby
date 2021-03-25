@@ -176,7 +176,7 @@ function Details() {
     <DetailsStyles className="details-container">
       <DetailsBG />
       <div className="details">
-        <span>September 5, 2021</span>
+        <span>August 28, 2022</span>
         <span>Portland, Oregon </span>
       </div>
     </DetailsStyles>

@@ -100,7 +100,7 @@ export default function Details() {
               <h2>When</h2>
               <ul>
                 <li>
-                  <p>September 5, 2021</p>
+                  <p>August 28, 2022</p>
                 </li>
                 <li>
                   <p>Arrival at 5:00pm</p>
@@ -127,7 +127,7 @@ export default function Details() {
                       <br />
                       Hillsboro, OR 97123
                     </p>
-                    <a href="https://goo.gl/maps/tyM7HbV1gnzTE8aC6" rel="noreferrer" target="_blank">
+                    <a href="https://goo.gl/maps/tyM7HbV1gnzTE8aC6" rel="noreferrer" title="Map It" target="_blank">
                       <FaDirections />
                     </a>
                   </div>
